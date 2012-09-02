@@ -14,7 +14,7 @@ host { 'cybersponse.local':
   ensure => 'present',
   ip     => '127.0.0.1',
   target => '/etc/hosts',
-  host_aliases => ['ext.cybersponse.local2', 'comet.cybersponse.local'],
+  host_aliases => ['ext.cybersponse.local', 'comet.cybersponse.local'],
 }
 
 if $hostname != 'roman-desktop2' {

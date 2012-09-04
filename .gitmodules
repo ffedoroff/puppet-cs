@@ -1,0 +1,15 @@
+[submodule "modules/apache"]
+	path = modules/apache
+	url = git@github.com:ffedoroff/puppetlabs-apache.git
+[submodule "modules/firewall"]
+	path = modules/firewall
+	url = git@github.com:ffedoroff/puppetlabs-firewall.git
+[submodule "modules/php"]
+	path = modules/php
+	url = git@github.com:ffedoroff/puppet-php.git
+[submodule "modules/postgres"]
+	path = modules/postgres
+	url = git@github.com:ffedoroff/puppet-postgres.git
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = git@github.com:ffedoroff/puppetlabs-stdlib.git

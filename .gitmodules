@@ -9,7 +9,7 @@
 	url = git@github.com:ffedoroff/puppet-php.git
 [submodule "modules/postgres"]
 	path = modules/postgres
-	url = git@github.com:ffedoroff/puppet-postgres.git
+	url = git://github.com/camptocamp/puppet-postgresql.git
 [submodule "modules/stdlib"]
 	path = modules/stdlib
 	url = git@github.com:ffedoroff/puppetlabs-stdlib.git

@@ -1,7 +1,3 @@
-class rs {
-  notify {'rs works':}
-}
-
 define rs::tools {
   $tools = [ 'sudo', 'mc', 'nano', 'htop', 'dnsutils', 'cron', 'wget' ]
   package { $tools: ensure => "installed" }
@@ -24,6 +20,17 @@ define rs::cs::developer (
 	$cs = [ 'git', 'postgresql', 'php5', 'php-pear', 'phpunit' ]
 	package { $cs: ensure => "installed" }
 
+	postgres::hba { "local":
+      allowedrules => [
+        "local    all all      md5",
+      ],
+    }
+	
+	/*postgres::createuser{"userr":passwd => "pass",}
+	postgres::createdb{"db_dev":owner=> "userr",}
+	postgres::createdb{"db_test":owner=> "userr",}
+	postgres::createdb{"db_external_dev":owner=> "userr",}
+*/
 	if $webserver == 'apache' {
 		class {'apache':  }
 		class {'apache::mod::php': }
